@@ -43,7 +43,6 @@ export interface SandpackProviderState {
   error: SandpackError | null;
   sandpackStatus: SandpackStatus;
   editorState: EditorState;
-  renderHiddenIframe: boolean;
   initMode: SandpackInitMode;
   reactDevTools?: ReactDevToolsMode;
 }
@@ -132,7 +131,6 @@ class SandpackProvider extends React.PureComponent<
       error: null,
       sandpackStatus: this.props.autorun ? "initial" : "idle",
       editorState: "pristine",
-      renderHiddenIframe: false,
       initMode: this.props.initMode || "lazy",
       reactDevTools: undefined,
     };
